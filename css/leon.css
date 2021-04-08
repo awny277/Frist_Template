@@ -510,7 +510,7 @@ html {
 @media (max-width:991px) {
     .up {
         padding-top: 46px;
-        top: 85vh;
+        top: 80vh;
     }
     .up a {
         padding: 16px 12px 10px;
