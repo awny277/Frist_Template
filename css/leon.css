@@ -95,16 +95,45 @@ html {
 }
 .header .links {
     position: relative;
+    cursor: pointer;
 }
-.header .links:hover .icon span:nth-child(1) {
-    width: 60%;
+.header .links .icon span {
+    animation-name: moving;
 }
-.header .links:hover .icon span:nth-child(2) {
-    width: 100%;
+.header .links  span:nth-of-type(2){
+    animation-name: moving2;
 }
-.header .links:hover .icon span:nth-child(3) {
-    width: 60%;
+.header .links:hover .icon span {
+    animation-play-state: running;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
+@keyframes moving
+{
+    0% {
+        width: 100%;
+    }
+    50% {
+        width: 60%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+@keyframes moving2 
+{
+    0% {
+        width: 60%;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 60%;
+    }
+}
+
 .header .links:hover ul
 {
     display:block ;
@@ -461,4 +490,33 @@ html {
     font-weight: bold;
 }
 /*      end fotter        */
-
+/*      start up        */
+.up {
+    position: sticky;
+    top: 90vh;
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    z-index: 999
+}
+.up a {
+    padding: 30px 15px 15px;
+    background-color: var(--main-color);
+}
+.up a i {
+    font-size: 40px;
+    color: var(--section-background);
+}
+@media (max-width:991px) {
+    .up {
+        padding-top: 46px;
+        top: 85vh;
+    }
+    .up a {
+        padding: 16px 12px 10px;
+    }
+    .up a i {
+        font-size: 27px;
+    }
+}
+/*      end up          */
